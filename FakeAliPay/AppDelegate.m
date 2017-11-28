@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    UITabBarController *tabBarCtrl = [[UITabBarController alloc] init];
+    self.window.rootViewController = tabBarCtrl;
+    
+    ViewController *viewCtrl = [[ViewController alloc] init];
+    UIViewController *secondViewCtrl = [[UIViewController alloc] init];
+    secondViewCtrl.tabBarItem.title = @"口碑";
+    secondViewCtrl.tabBarItem.image = [UIImage imageNamed:@"口碑"];
+    secondViewCtrl.tabBarItem.selectedImage = [UIImage imageNamed:@"selected口碑"];
+    UIViewController *thirdViewCtrl = [[UIViewController alloc] init];
+    thirdViewCtrl.tabBarItem.title = @"朋友";
+    UIViewController *fourthViewCtrl = [[UIViewController alloc] init];
+    fourthViewCtrl.tabBarItem.title = @"我的";
+    
+    tabBarCtrl.viewControllers = @[viewCtrl, secondViewCtrl, thirdViewCtrl, fourthViewCtrl];
+
+    
     return YES;
 }
 
