@@ -27,6 +27,7 @@
         self.tableView.contentInset = UIEdgeInsetsMake(335, 0, 0, 0);
         self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(335, 0, 0, 0);
         self.tableView.backgroundColor = WHITE_SMOKE;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
         
         [self addSubview:_tableView];

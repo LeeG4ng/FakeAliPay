@@ -8,6 +8,13 @@
 
 #import "ViewController.h"
 #import "MainView.h"
+#import "NotificationCell.h"
+#import "BannerCell.h"
+#import "FunctionCell.h"
+#import "FooterCell.h"
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+#define WHITE_SMOKE [UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1.00]
+#define WHITE_LILAC [UIColor colorWithRed:0.92 green:0.91 blue:0.91 alpha:1.00]
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -42,30 +49,76 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+#pragma mark - Configure Cell
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    static NSString *id = @"id";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:id];
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:id];
+    if(indexPath.section == 0) {
+        static NSString *notificationCellID = @"notificationCell";
+        NotificationCell *cell = [tableView dequeueReusableCellWithIdentifier:notificationCellID];
+        if(!cell) {
+            cell = [[NotificationCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:notificationCellID];
+        }
+        
+        return cell;
+    } else if(indexPath.section == 1) {
+        static NSString *bannerCellID = @"bannerCell";
+        BannerCell *cell = [tableView dequeueReusableCellWithIdentifier:bannerCellID];
+        if(!cell) {
+            cell = [[BannerCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:bannerCellID];
+        }
+        
+        return cell;
+    } else {
+        if(indexPath.row == 1) {
+            static NSString *footerCellID = @"footerCell";
+            FooterCell *cell = [tableView dequeueReusableCellWithIdentifier:footerCellID];
+            if(!cell) {
+                cell = [[FooterCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:footerCellID];
+            }
+            return cell;
+        }
+        static NSString *functionCellID = @"functionCell";
+        FunctionCell *cell = [tableView dequeueReusableCellWithIdentifier:functionCellID];
+        if(!cell) {
+            cell = [[FunctionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:functionCellID];
+        }
+        
+        return cell;
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"第%ld行", (long)indexPath.row];
-    return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.section == 0) {
+        return 68;
+    } else if(indexPath.section == 1) {
+        return 90;
+    } else {
+        if(indexPath.row == 1)
+            return 74;
+        return 130;
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 4;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    if(section == 3)
+        return 2;
+    return 1;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"select row:%ld", (long)indexPath.row);
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 8;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *headerView = [[UIView alloc] init];
+    headerView.backgroundColor = [UIColor clearColor];
+    return headerView;
+}
+
+#pragma mark - Configure Scroll
 - (void)refreshAction {
     [self.refresh endRefreshing];
 }

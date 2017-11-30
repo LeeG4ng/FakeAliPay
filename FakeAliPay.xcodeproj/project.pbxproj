@@ -18,6 +18,10 @@
 		E2DC848F1FCD875D00B5D1A5 /* SmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC848E1FCD875D00B5D1A5 /* SmallView.m */; };
 		E2DC84921FCED67F00B5D1A5 /* TopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC84911FCED67F00B5D1A5 /* TopButton.m */; };
 		E2DC84951FCED69500B5D1A5 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC84941FCED69500B5D1A5 /* Button.m */; };
+		E2DC84991FD0461500B5D1A5 /* FunctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC84981FD0461500B5D1A5 /* FunctionCell.m */; };
+		E2DC849D1FD0468F00B5D1A5 /* NotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC849C1FD0468F00B5D1A5 /* NotificationCell.m */; };
+		E2DC84A01FD046A600B5D1A5 /* BannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC849F1FD046A600B5D1A5 /* BannerCell.m */; };
+		E2DC84A31FD0554D00B5D1A5 /* FooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC84A21FD0554D00B5D1A5 /* FooterCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,14 @@
 		E2DC84911FCED67F00B5D1A5 /* TopButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopButton.m; sourceTree = "<group>"; };
 		E2DC84931FCED69500B5D1A5 /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
 		E2DC84941FCED69500B5D1A5 /* Button.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Button.m; sourceTree = "<group>"; };
+		E2DC84971FD0461500B5D1A5 /* FunctionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionCell.h; sourceTree = "<group>"; };
+		E2DC84981FD0461500B5D1A5 /* FunctionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionCell.m; sourceTree = "<group>"; };
+		E2DC849B1FD0468F00B5D1A5 /* NotificationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationCell.h; sourceTree = "<group>"; };
+		E2DC849C1FD0468F00B5D1A5 /* NotificationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationCell.m; sourceTree = "<group>"; };
+		E2DC849E1FD046A600B5D1A5 /* BannerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerCell.h; sourceTree = "<group>"; };
+		E2DC849F1FD046A600B5D1A5 /* BannerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerCell.m; sourceTree = "<group>"; };
+		E2DC84A11FD0554D00B5D1A5 /* FooterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FooterCell.h; sourceTree = "<group>"; };
+		E2DC84A21FD0554D00B5D1A5 /* FooterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FooterCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +102,7 @@
 		E2DC84891FCBB76D00B5D1A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E2DC849A1FD0461A00B5D1A5 /* Cells */,
 				E2DC84961FCED69E00B5D1A5 /* Buttons */,
 				E2DC84851FCBB42200B5D1A5 /* MainView.h */,
 				E2DC84861FCBB42200B5D1A5 /* MainView.m */,
@@ -112,6 +125,21 @@
 				E2DC84941FCED69500B5D1A5 /* Button.m */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		E2DC849A1FD0461A00B5D1A5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E2DC849B1FD0468F00B5D1A5 /* NotificationCell.h */,
+				E2DC849C1FD0468F00B5D1A5 /* NotificationCell.m */,
+				E2DC849E1FD046A600B5D1A5 /* BannerCell.h */,
+				E2DC849F1FD046A600B5D1A5 /* BannerCell.m */,
+				E2DC84971FD0461500B5D1A5 /* FunctionCell.h */,
+				E2DC84981FD0461500B5D1A5 /* FunctionCell.m */,
+				E2DC84A11FD0554D00B5D1A5 /* FooterCell.h */,
+				E2DC84A21FD0554D00B5D1A5 /* FooterCell.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,10 +217,14 @@
 				E2DC847E1FCB0C9500B5D1A5 /* ButtonView.m in Sources */,
 				E2DC848F1FCD875D00B5D1A5 /* SmallView.m in Sources */,
 				E2DC84871FCBB42200B5D1A5 /* MainView.m in Sources */,
+				E2DC84A01FD046A600B5D1A5 /* BannerCell.m in Sources */,
 				E2DC84921FCED67F00B5D1A5 /* TopButton.m in Sources */,
+				E2DC849D1FD0468F00B5D1A5 /* NotificationCell.m in Sources */,
 				E2DC84951FCED69500B5D1A5 /* Button.m in Sources */,
 				E24241FC1FC830B600F8A9CA /* main.m in Sources */,
 				E24241EE1FC830B600F8A9CA /* AppDelegate.m in Sources */,
+				E2DC84991FD0461500B5D1A5 /* FunctionCell.m in Sources */,
+				E2DC84A31FD0554D00B5D1A5 /* FooterCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
