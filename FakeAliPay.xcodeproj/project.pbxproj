@@ -12,12 +12,12 @@
 		E24241F61FC830B600F8A9CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24241F51FC830B600F8A9CA /* Assets.xcassets */; };
 		E24241F91FC830B600F8A9CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24241F71FC830B600F8A9CA /* LaunchScreen.storyboard */; };
 		E24241FC1FC830B600F8A9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E24241FB1FC830B600F8A9CA /* main.m */; };
-		E24242091FC8525B00F8A9CA /* 口碑@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E24242081FC8525B00F8A9CA /* 口碑@2x.png */; };
-		E2C9C4F11FC855FA00E8A1FD /* 首页@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C9C4F01FC855F900E8A1FD /* 首页@2x.png */; };
-		E2C9C4F31FC8569C00E8A1FD /* selected首页@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C9C4F21FC8569C00E8A1FD /* selected首页@2x.png */; };
-		E2C9C4FD1FC8589200E8A1FD /* selected口碑@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C9C4FC1FC8589200E8A1FD /* selected口碑@2x.png */; };
 		E2DC847E1FCB0C9500B5D1A5 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC847D1FCB0C9500B5D1A5 /* ButtonView.m */; };
 		E2DC84871FCBB42200B5D1A5 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC84861FCBB42200B5D1A5 /* MainView.m */; };
+		E2DC848C1FCD875300B5D1A5 /* BigView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC848B1FCD875300B5D1A5 /* BigView.m */; };
+		E2DC848F1FCD875D00B5D1A5 /* SmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC848E1FCD875D00B5D1A5 /* SmallView.m */; };
+		E2DC84921FCED67F00B5D1A5 /* TopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC84911FCED67F00B5D1A5 /* TopButton.m */; };
+		E2DC84951FCED69500B5D1A5 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC84941FCED69500B5D1A5 /* Button.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +30,18 @@
 		E24241F81FC830B600F8A9CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E24241FA1FC830B600F8A9CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E24241FB1FC830B600F8A9CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E24242081FC8525B00F8A9CA /* 口碑@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "口碑@2x.png"; sourceTree = "<group>"; };
-		E2C9C4F01FC855F900E8A1FD /* 首页@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页@2x.png"; sourceTree = "<group>"; };
-		E2C9C4F21FC8569C00E8A1FD /* selected首页@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected首页@2x.png"; sourceTree = "<group>"; };
-		E2C9C4FC1FC8589200E8A1FD /* selected口碑@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected口碑@2x.png"; sourceTree = "<group>"; };
 		E2DC847C1FCB0C9500B5D1A5 /* ButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonView.h; sourceTree = "<group>"; };
 		E2DC847D1FCB0C9500B5D1A5 /* ButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonView.m; sourceTree = "<group>"; };
 		E2DC84851FCBB42200B5D1A5 /* MainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		E2DC84861FCBB42200B5D1A5 /* MainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		E2DC848A1FCD875300B5D1A5 /* BigView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigView.h; sourceTree = "<group>"; };
+		E2DC848B1FCD875300B5D1A5 /* BigView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigView.m; sourceTree = "<group>"; };
+		E2DC848D1FCD875D00B5D1A5 /* SmallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmallView.h; sourceTree = "<group>"; };
+		E2DC848E1FCD875D00B5D1A5 /* SmallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmallView.m; sourceTree = "<group>"; };
+		E2DC84901FCED67F00B5D1A5 /* TopButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopButton.h; sourceTree = "<group>"; };
+		E2DC84911FCED67F00B5D1A5 /* TopButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopButton.m; sourceTree = "<group>"; };
+		E2DC84931FCED69500B5D1A5 /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
+		E2DC84941FCED69500B5D1A5 /* Button.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Button.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,31 +83,35 @@
 				E24241F71FC830B600F8A9CA /* LaunchScreen.storyboard */,
 				E24241FA1FC830B600F8A9CA /* Info.plist */,
 				E24241FB1FC830B600F8A9CA /* main.m */,
-				E24242051FC8508F00F8A9CA /* image */,
 			);
 			path = FakeAliPay;
-			sourceTree = "<group>";
-		};
-		E24242051FC8508F00F8A9CA /* image */ = {
-			isa = PBXGroup;
-			children = (
-				E2C9C4F21FC8569C00E8A1FD /* selected首页@2x.png */,
-				E2C9C4F01FC855F900E8A1FD /* 首页@2x.png */,
-				E2C9C4FC1FC8589200E8A1FD /* selected口碑@2x.png */,
-				E24242081FC8525B00F8A9CA /* 口碑@2x.png */,
-			);
-			path = image;
 			sourceTree = "<group>";
 		};
 		E2DC84891FCBB76D00B5D1A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E2DC84961FCED69E00B5D1A5 /* Buttons */,
 				E2DC84851FCBB42200B5D1A5 /* MainView.h */,
 				E2DC84861FCBB42200B5D1A5 /* MainView.m */,
+				E2DC848A1FCD875300B5D1A5 /* BigView.h */,
+				E2DC848B1FCD875300B5D1A5 /* BigView.m */,
+				E2DC848D1FCD875D00B5D1A5 /* SmallView.h */,
+				E2DC848E1FCD875D00B5D1A5 /* SmallView.m */,
 				E2DC847C1FCB0C9500B5D1A5 /* ButtonView.h */,
 				E2DC847D1FCB0C9500B5D1A5 /* ButtonView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E2DC84961FCED69E00B5D1A5 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E2DC84901FCED67F00B5D1A5 /* TopButton.h */,
+				E2DC84911FCED67F00B5D1A5 /* TopButton.m */,
+				E2DC84931FCED69500B5D1A5 /* Button.h */,
+				E2DC84941FCED69500B5D1A5 /* Button.m */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +173,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E24241F91FC830B600F8A9CA /* LaunchScreen.storyboard in Resources */,
-				E24242091FC8525B00F8A9CA /* 口碑@2x.png in Resources */,
-				E2C9C4FD1FC8589200E8A1FD /* selected口碑@2x.png in Resources */,
-				E2C9C4F31FC8569C00E8A1FD /* selected首页@2x.png in Resources */,
-				E2C9C4F11FC855FA00E8A1FD /* 首页@2x.png in Resources */,
 				E24241F61FC830B600F8A9CA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,8 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E24241F11FC830B600F8A9CA /* ViewController.m in Sources */,
+				E2DC848C1FCD875300B5D1A5 /* BigView.m in Sources */,
 				E2DC847E1FCB0C9500B5D1A5 /* ButtonView.m in Sources */,
+				E2DC848F1FCD875D00B5D1A5 /* SmallView.m in Sources */,
 				E2DC84871FCBB42200B5D1A5 /* MainView.m in Sources */,
+				E2DC84921FCED67F00B5D1A5 /* TopButton.m in Sources */,
+				E2DC84951FCED69500B5D1A5 /* Button.m in Sources */,
 				E24241FC1FC830B600F8A9CA /* main.m in Sources */,
 				E24241EE1FC830B600F8A9CA /* AppDelegate.m in Sources */,
 			);

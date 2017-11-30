@@ -12,6 +12,7 @@
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UIRefreshControl *refresh;
+@property (nonatomic, strong) MainView *mainView;
 
 @end
 
@@ -24,14 +25,14 @@
     self.tabBarItem.image = [UIImage imageNamed:@"首页"];
     self.tabBarItem.selectedImage = [UIImage imageNamed:@"selected首页"];
     
-    MainView *mainView = [[MainView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.view addSubview:mainView];
-    mainView.tableView.delegate = self;
-    mainView.tableView.dataSource = self;
+    self.mainView = [[MainView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.view addSubview:self.mainView];
+    self.mainView.tableView.delegate = self;
+    self.mainView.tableView.dataSource = self;
     
     self.refresh = [[UIRefreshControl alloc] init];
     [self.refresh addTarget:self action:@selector(refreshAction) forControlEvents:UIControlEventValueChanged];
-    mainView.tableView.refreshControl = _refresh;
+    self.mainView.tableView.refreshControl = _refresh;
     
 }
 
@@ -61,12 +62,26 @@
     return 20;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"select row:%ld", (long)indexPath.row);
+}
+
 - (void)refreshAction {
     [self.refresh endRefreshing];
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat y = scrollView.contentOffset.y;
-    
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if(self.mainView.tableView.contentOffset.y < 70-355) {
+    if(self.mainView.rate < 0.5) {
+        [self.mainView.tableView setContentOffset:CGPointMake(0, -355) animated:YES];
+    } else {
+        [self.mainView.tableView setContentOffset:CGPointMake(0, 70-355) animated:YES];
+    }
+    }
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 @end

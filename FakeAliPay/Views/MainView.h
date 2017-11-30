@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "ButtonView.h"
+#import "BigView.h"
+#import "SmallView.h"
 
 @interface MainView : UIView
 
-@property (nonatomic, strong) UIView *bigView;
-@property (nonatomic, strong) UIView *smallView;
+@property (nonatomic, strong) BigView *bigView;
+@property (nonatomic, strong) SmallView *smallView;
 @property (nonatomic, strong) ButtonView *btnView;
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic) double rate;
 
 @end

@@ -1,15 +1,14 @@
 //
-//  ButtonView.h
+//  SmallView.h
 //  FakeAliPay
 //
-//  Created by Gary Lee on 2017/11/26.
+//  Created by Gary Lee on 2017/11/28.
 //  Copyright © 2017年 UniqueStudio. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ButtonView : UIView
-
+@interface SmallView : UIView
 
 
 @end
