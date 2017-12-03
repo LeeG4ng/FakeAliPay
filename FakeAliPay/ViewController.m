@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) UIRefreshControl *refresh;
 @property (nonatomic, strong) MainView *mainView;
+@property (nonatomic, strong) NSArray *funcArr;
+@property (nonatomic, strong) NSArray *msgArr;
 
 @end
 
@@ -57,7 +59,7 @@
         if(!cell) {
             cell = [[NotificationCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:notificationCellID];
         }
-        
+        [cell configDataWithArr:self.msgArr];
         return cell;
     } else if(indexPath.section == 1) {
         static NSString *bannerCellID = @"bannerCell";
@@ -81,7 +83,7 @@
         if(!cell) {
             cell = [[FunctionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:functionCellID];
         }
-        
+        [cell configDataWithDict:self.funcArr[indexPath.section-2]];
         return cell;
     }
 }
@@ -125,11 +127,21 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     if(self.mainView.tableView.contentOffset.y < 70-355) {
-    if(self.mainView.rate < 0.5) {
-        [self.mainView.tableView setContentOffset:CGPointMake(0, -355) animated:YES];
-    } else {
-        [self.mainView.tableView setContentOffset:CGPointMake(0, 70-355) animated:YES];
+        if(self.mainView.rate < 0.5) {
+            [self.mainView.tableView setContentOffset:CGPointMake(0, -355) animated:YES];
+        } else {
+            [self.mainView.tableView setContentOffset:CGPointMake(0, 70-355) animated:YES];
+        }
     }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if(self.mainView.tableView.contentOffset.y < 70-355) {
+        if(self.mainView.rate < 0.5) {
+            [self.mainView.tableView setContentOffset:CGPointMake(0, -355) animated:YES];
+        } else {
+            [self.mainView.tableView setContentOffset:CGPointMake(0, 70-355) animated:YES];
+        }
     }
 }
 
@@ -137,4 +149,29 @@
     return UIStatusBarStyleLightContent;
 }
 
+#pragma mark - Configure Data
+- (NSArray *)msgArr {
+    if(!_msgArr) {
+        NSAttributedString *detail1 = [[NSAttributedString alloc] initWithString:@"蚂蚁庄园提醒你又有小鸡来抢食" attributes:@{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Light" size:14]}];
+        NSAttributedString *time1 = [[NSAttributedString alloc] initWithString:@"  6分钟前" attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13], NSForegroundColorAttributeName:[UIColor colorWithRed:0.64 green:0.64 blue:0.64 alpha:1.00]}];
+        NSMutableAttributedString *str1 = [[NSMutableAttributedString alloc] initWithAttributedString:detail1];
+        [str1 appendAttributedString:time1];
+        
+        NSAttributedString *detail2 = [[NSAttributedString alloc] initWithString:@"付款后你还得到了这些" attributes:@{NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Light" size:14]}];
+        NSAttributedString *time2 = [[NSAttributedString alloc] initWithString:@"  30分钟前" attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13], NSForegroundColorAttributeName:[UIColor colorWithRed:0.64 green:0.64 blue:0.64 alpha:1.00]}];
+        NSMutableAttributedString *str2 = [[NSMutableAttributedString alloc] initWithAttributedString:detail2];
+        [str2 appendAttributedString:time2];
+        _msgArr = @[str1, str2];
+    }
+    return _msgArr;
+}
+
+- (NSArray *)funcArr {
+    if(!_funcArr) {
+        NSDictionary *func0 = @{@"name":@"惠支付", @"title1":@"提现免服务费", @"subtitle1":@"蚂蚁积分兑好礼", @"image1":[UIImage imageNamed:@"func0.1"], @"title2":@"支付宝发红包", @"subtitle2":@"通知好友来领取", @"image2":[UIImage imageNamed:@"func0.2"]};
+        NSDictionary *func1 = @{@"name":@"生活服务", @"title1":@"证件照随手拍", @"subtitle1":@"快来试试吧！", @"image1":[UIImage imageNamed:@"func1.1"], @"title2":@"这些统统免费", @"subtitle2":@"2017福利你知多少", @"image2":[UIImage imageNamed:@"func1.2"]};
+        _funcArr = @[func0, func1];
+    }
+    return _funcArr;
+}
 @end

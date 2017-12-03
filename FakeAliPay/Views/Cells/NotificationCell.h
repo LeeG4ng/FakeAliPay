@@ -10,4 +10,9 @@
 
 @interface NotificationCell : UITableViewCell
 
+@property (nonatomic, strong) UILabel *msg1;
+@property (nonatomic, strong) UILabel *msg2;
+
+- (void)configDataWithArr:(NSArray *)arr;
+
 @end

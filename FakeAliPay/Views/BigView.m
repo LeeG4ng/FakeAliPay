@@ -32,7 +32,6 @@
         searchField.layer.cornerRadius = 1.0f;
         searchField.layer.masksToBounds = YES;
         searchField.textColor = [UIColor whiteColor];
-//        searchField.placeholder = @"生活缴费";
         NSMutableAttributedString *placeholder = [[NSMutableAttributedString alloc] initWithString:@"花呗" attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
         searchField.attributedPlaceholder = placeholder;
         [self.search setImage:[UIImage imageNamed:@"S3"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
