@@ -31,8 +31,10 @@
     secondViewCtrl.tabBarItem.selectedImage = [UIImage imageNamed:@"selected口碑"];
     UIViewController *thirdViewCtrl = [[UIViewController alloc] init];
     thirdViewCtrl.tabBarItem.title = @"朋友";
+    thirdViewCtrl.tabBarItem.image = [UIImage imageNamed:@"朋友"];
     UIViewController *fourthViewCtrl = [[UIViewController alloc] init];
     fourthViewCtrl.tabBarItem.title = @"我的";
+    fourthViewCtrl.tabBarItem.image = [UIImage imageNamed:@"我的"];
     
     tabBarCtrl.viewControllers = @[viewCtrl, secondViewCtrl, thirdViewCtrl, fourthViewCtrl];
 

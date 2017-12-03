@@ -33,6 +33,7 @@
         searchField.layer.masksToBounds = YES;
         searchField.textColor = [UIColor whiteColor];
         NSMutableAttributedString *placeholder = [[NSMutableAttributedString alloc] initWithString:@"花呗" attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+        [placeholder addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, 2)];
         searchField.attributedPlaceholder = placeholder;
         [self.search setImage:[UIImage imageNamed:@"S3"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
         

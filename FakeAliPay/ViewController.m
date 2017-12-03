@@ -59,6 +59,14 @@
         if(!cell) {
             cell = [[NotificationCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:notificationCellID];
         }
+        NSMutableArray *imageArr = [NSMutableArray array];
+        for(int i = 1; i <= 24; i++) {
+            NSString *str = [NSString stringWithFormat:@"gif%d", i];
+            [imageArr addObject:[UIImage imageNamed:str]];
+        }
+        cell.image.animationImages = imageArr;
+        cell.image.animationDuration = 2.4f;
+        [cell.image startAnimating];
         [cell configDataWithArr:self.msgArr];
         return cell;
     } else if(indexPath.section == 1) {
@@ -135,15 +143,15 @@
     }
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    if(self.mainView.tableView.contentOffset.y < 70-355) {
-        if(self.mainView.rate < 0.5) {
-            [self.mainView.tableView setContentOffset:CGPointMake(0, -355) animated:YES];
-        } else {
-            [self.mainView.tableView setContentOffset:CGPointMake(0, 70-355) animated:YES];
-        }
-    }
-}
+//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+//    if(self.mainView.tableView.contentOffset.y < 70-355) {
+//        if(self.mainView.rate < 0.5) {
+//            [self.mainView.tableView setContentOffset:CGPointMake(0, -355) animated:YES];
+//        } else {
+//            [self.mainView.tableView setContentOffset:CGPointMake(0, 70-355) animated:YES];
+//        }
+//    }
+//}
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;

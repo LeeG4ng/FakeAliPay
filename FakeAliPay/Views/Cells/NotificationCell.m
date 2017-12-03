@@ -14,18 +14,10 @@
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 4, 88, 68)];
-        NSMutableArray *imageArr = [NSMutableArray array];
-        for(int i = 1; i <= 24; i++) {
-            NSString *str = [NSString stringWithFormat:@"gif%d", i];
-            [imageArr addObject:[UIImage imageNamed:str]];
-        }
-        image.animationImages = imageArr;
-        image.animationDuration = 2.4f;
-        image.contentMode = UIViewContentModeLeft;
-        image.layer.masksToBounds = YES;
-        [image startAnimating];
-        [self.contentView addSubview:image];
+        _image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 4, 88, 68)];
+        [self.contentView addSubview:_image];
+        _image.contentMode = UIViewContentModeLeft;
+        _image.layer.masksToBounds = YES;
         
         self.msg1 = [[UILabel alloc] initWithFrame:CGRectMake(93, 18, 260, 14)];
         self.msg1.textAlignment = NSTextAlignmentLeft;

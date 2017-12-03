@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BannerCell : UITableViewCell
+@interface BannerCell : UITableViewCell <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) NSArray *imageArr;
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) UIPageControl *pageCtrl;
 
 @end

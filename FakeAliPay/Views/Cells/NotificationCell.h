@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UILabel *msg1;
 @property (nonatomic, strong) UILabel *msg2;
+@property (nonatomic, strong) UIImageView *image;
 
 - (void)configDataWithArr:(NSArray *)arr;
 

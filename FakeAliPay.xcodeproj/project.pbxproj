@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E21C20EA1FD3DC16002098E4 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C20E91FD3DC16002098E4 /* CollectionViewCell.m */; };
 		E24241EE1FC830B600F8A9CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E24241ED1FC830B600F8A9CA /* AppDelegate.m */; };
 		E24241F11FC830B600F8A9CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E24241F01FC830B600F8A9CA /* ViewController.m */; };
 		E24241F61FC830B600F8A9CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24241F51FC830B600F8A9CA /* Assets.xcassets */; };
@@ -49,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E21C20E81FD3DC16002098E4 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		E21C20E91FD3DC16002098E4 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		E24241E91FC830B600F8A9CA /* FakeAliPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeAliPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24241EC1FC830B600F8A9CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E24241ED1FC830B600F8A9CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				E2DC849C1FD0468F00B5D1A5 /* NotificationCell.m */,
 				E2DC849E1FD046A600B5D1A5 /* BannerCell.h */,
 				E2DC849F1FD046A600B5D1A5 /* BannerCell.m */,
+				E21C20E81FD3DC16002098E4 /* CollectionViewCell.h */,
+				E21C20E91FD3DC16002098E4 /* CollectionViewCell.m */,
 				E2DC84971FD0461500B5D1A5 /* FunctionCell.h */,
 				E2DC84981FD0461500B5D1A5 /* FunctionCell.m */,
 				E2DC84A11FD0554D00B5D1A5 /* FooterCell.h */,
@@ -328,6 +333,7 @@
 				E24241FC1FC830B600F8A9CA /* main.m in Sources */,
 				E24241EE1FC830B600F8A9CA /* AppDelegate.m in Sources */,
 				E2DC84991FD0461500B5D1A5 /* FunctionCell.m in Sources */,
+				E21C20EA1FD3DC16002098E4 /* CollectionViewCell.m in Sources */,
 				E2DC84A31FD0554D00B5D1A5 /* FooterCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
