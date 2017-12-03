@@ -86,12 +86,15 @@
             }
             return cell;
         }
+        
         static NSString *functionCellID = @"functionCell";
         FunctionCell *cell = [tableView dequeueReusableCellWithIdentifier:functionCellID];
         if(!cell) {
             cell = [[FunctionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:functionCellID];
         }
-        [cell configDataWithDict:self.funcArr[indexPath.section-2]];
+        NSInteger index = indexPath.section;
+        index = (index - 2)%2;
+        [cell configDataWithDict:self.funcArr[index]];
         return cell;
     }
 }
@@ -143,15 +146,18 @@
     }
 }
 
-//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-//    if(self.mainView.tableView.contentOffset.y < 70-355) {
-//        if(self.mainView.rate < 0.5) {
-//            [self.mainView.tableView setContentOffset:CGPointMake(0, -355) animated:YES];
-//        } else {
-//            [self.mainView.tableView setContentOffset:CGPointMake(0, 70-355) animated:YES];
-//        }
-//    }
-//}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if(self.mainView.tableView.contentOffset.y > -355) {
+        NSLog(@"=======%lf",self.mainView.tableView.contentOffset.y);
+        if(self.mainView.tableView.contentOffset.y < 70-355) {
+            if(self.mainView.rate < 0.5) {
+                [self.mainView.tableView setContentOffset:CGPointMake(0, -355) animated:YES];
+            } else {
+                [self.mainView.tableView setContentOffset:CGPointMake(0, 70-355) animated:YES];
+            }
+        }
+    }
+}
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;

@@ -9,7 +9,7 @@
 #import "BannerCell.h"
 #import "CollectionViewCell.h"
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
-#define MAX_SECTIONS 1000
+#define MAX_SECTIONS 100
 
 @implementation BannerCell
 
